@@ -22,17 +22,18 @@ public class Corpus {
 		String docText = null;
 		while (dataSource.hasMore()) {
 			docText = dataSource.loadNextDocText();
+			docId = dataSource.getCurrentDocId();
 			if (docText != null){
-				loadNewDoc(docText);
+				loadNewDoc(docId,docText);
 			}
 		} 
 		Main.debug("Number of docs loaded: " + getNumberOfDocs() );
 		Main.debug("General Term Frequencies map: " + generalTermFrequencies + "\n");
 	}
 	
-	public void loadNewDoc(String text){
-		Doc newDoc = new Doc(dataSource.getCurrentDocId(), this);
-		newDoc.parseAndLoad(text);
+	public void loadNewDoc(String docId, String docText){
+		Doc newDoc = new Doc(docId, this);
+		newDoc.parseAndLoad(docText);
 		docs.add(newDoc);
 	}
 
