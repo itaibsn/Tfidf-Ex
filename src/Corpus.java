@@ -19,7 +19,8 @@ public class Corpus {
 
 	public void load() {
 		Main.debug("Loading docs from corpuse data source..\n");
-		String docText = null;
+		String  docText = null,
+			docId = null;
 		while (dataSource.hasMore()) {
 			docText = dataSource.loadNextDocText();
 			docId = dataSource.getCurrentDocId();
