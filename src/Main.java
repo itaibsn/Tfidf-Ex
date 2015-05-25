@@ -1,7 +1,7 @@
 
 public class Main {
 
-	final public static boolean DEBUG = true;
+	final public static boolean DEBUG = false;
 	
 	public static void main(String[] args) {
 		System.out.println("Starting");
