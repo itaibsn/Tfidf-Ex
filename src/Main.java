@@ -4,11 +4,14 @@ public class Main {
 	final public static boolean DEBUG = true;
 	
 	public static void main(String[] args) {
+		System.out.println("Starting");
 		Corpus corpus = new Corpus((new DataSource()).init());
+		System.out.println("Loading Corpus...");
 		corpus.load();
+		System.out.println("Calculating tf-idf...");
 		corpus.calcTfIdf();
 		corpus.printDocTermsOrderByTfIdfScore();
-		debug("done.");
+		System.out.println("done.");
 	}
 	
 	public static void debug(String msg){
