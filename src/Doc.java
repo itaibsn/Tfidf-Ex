@@ -28,11 +28,11 @@ public class Doc {
 		this.id = id;
 		this.termCounters = new HashMap<String, Integer>();
 		this.ownerCorpus = ownerCorpus;
-		this.tfIdfSortedSet = getNewValueSortedSet();
+		this.tfIdfSortedSet = getNewValueSortedSetOfPairs();
 	}
 	
 	//get a new empty sorted by value set of pairs. (term -> tf-idf score) 
-	private SortedSet<Map.Entry<String, Double>> getNewValueSortedSet() {
+	private SortedSet<Map.Entry<String, Double>> getNewValueSortedSetOfPairs() {
 		
 		//create a comparator to compare the pairs by their weight
 		Comparator<Map.Entry<String, Double>> MyComperator = new Comparator<Map.Entry<String,Double>>() {
