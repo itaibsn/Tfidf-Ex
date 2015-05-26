@@ -39,8 +39,8 @@ public class Corpus {
 	}
 
 	public void updateTerm(String term) {
-		Integer oldTokenFrequency = generalTermFrequencies.get(term);
-		generalTermFrequencies.put(term, oldTokenFrequency != null ? ++oldTokenFrequency : 1);
+		Integer oldTermFrequency = generalTermFrequencies.get(term);
+		generalTermFrequencies.put(term, oldTermFrequency != null ? ++oldTermFrequency : 1);
 	}
 
 	public void calcTfIdf() {
