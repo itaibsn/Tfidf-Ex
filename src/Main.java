@@ -14,6 +14,8 @@ public class Main {
 		System.out.println("done.");
 	}
 	
+	
+	//TODO: get dubug function to different class (Logger)
 	public static void debug(String msg){
 		if (DEBUG) {
 			System.out.println("DEBUG	" + msg);
